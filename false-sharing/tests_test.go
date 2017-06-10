@@ -21,6 +21,9 @@ type Mutex struct {
 	state int32
 	sema  uint32
 }
+
+Go cache line size constants:
+https://github.com/golang/go/search?p=1&q=CacheLineSize+path%3Asrc%2Fruntime%2Finternal%2Fsys&type=&utf8=✓
 */
 
 func BenchmarkNonPaddedMutex(b *testing.B) {
